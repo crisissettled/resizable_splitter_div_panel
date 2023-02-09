@@ -3,7 +3,7 @@ const leftSide = resizer.previousElementSibling;
 const rightSide = resizer.nextElementSibling;
 
 // The current position of mouse
-let x = 0;
+// let x = 0;
 let y = 0;
 
 // Width of left side
@@ -28,7 +28,7 @@ resizer.addEventListener("mousedown", mouseDownHandler);
 const mouseMoveHandler = function (e) {
   // How far the mouse has been moved
   const dx = e.clientX - x;
-  const dy = e.clientY - y;
+  // const dy = e.clientY - y;
 
   const newLeftWidth =
     ((leftWidth + dx) * 100) / resizer.parentNode.getBoundingClientRect().width;

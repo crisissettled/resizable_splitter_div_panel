@@ -3,19 +3,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>splitter div resizable - horizontal</title>
-    <script src="./js/horizontal.js" defer></script>
+    <title>splitter div resizable - vertical</title>
+    <script src="./js/vertical.js" defer></script>
     <style>
       .container {
         display: flex;
         border: 1px solid sandybrown;
-        width: 100%;
+        flex-direction: column;
+        height: 600px;
       }
       .resizer {
         background-color: #555;
-        height: 500px;
-        width: 10px;
-        cursor: col-resize;
+        height: 10px;     
+        cursor: row-resize;
       }
       .left {
         border: 1px solid #eaeaea;
@@ -23,15 +23,11 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <!-- Left element -->
-      <div class="left">Left</div>
-
-      <!-- The resizer -->
-      <div class="resizer" id="dragMe"></div>
-
-      <!-- Right element -->
-      <div style="flex: 1 1 0%">Right</div>
+    <div  class="container">
+        <div>Top</div>
+        <div class="resizer" id="dragMe"></div>
+        <div style="flex: 1 1 0%">Bottom</div>
+    </div>
     </div>
   </body>
 </html>
